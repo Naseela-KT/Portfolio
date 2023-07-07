@@ -312,7 +312,16 @@ function validateForm() {
     });
     return false;
   }
-
+ const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+  if(specialChars.test(name)){
+    Swal.fire({
+      icon: 'error',
+      title: "Error", 
+      text: 'Name Cannot contain Special Characters.',  
+      confirmButtonText: "Close", 
+    });
+    return false;
+  }
   if (mobilenumber=="" || mobilenumber==null) {
     Swal.fire({
       icon: 'error',
