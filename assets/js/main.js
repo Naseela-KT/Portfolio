@@ -332,16 +332,6 @@ function validateForm() {
     });
     return false;
   }
-  if((mobilenumber.charAt(0)!=9) && (mobilenumber.charAt(0)!=8) && (mobilenumber.charAt(0)!=7))
-  {
-    Swal.fire({
-      icon: 'error',
-      title: "Error", 
-      text: 'Phone must start with 9 or 8 or 7',  
-      confirmButtonText: "Close", 
-    });
-    return false;
-  }
 
   if (mobilenumber.length<10 || mobilenumber.length>10){
     Swal.fire({
